@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CYBER SENTINEL</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#05080d;
+    color:#fff;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(5,8,13,.95);
+    border-bottom:1px solid #16354a;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    color:#00eaff;
+    font-size:24px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+nav a{
+    color:#aaa;
+    text-decoration:none;
+    margin-left:25px;
+}
+
+nav a:hover{
+    color:#00eaff;
+}
+
+.hero{
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+    background:
+    radial-gradient(circle at center,#063447 0%,#05080d 55%);
+}
+
+.hero h1{
+    font-size:clamp(42px,8vw,85px);
+    color:#00eaff;
+    text-shadow:0 0 25px #00eaff;
+}
+
+.hero p{
+    max-width:700px;
+    margin:20px auto;
+    color:#aab8c2;
+    font-size:18px;
+    line-height:1.7;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#00eaff;
+    color:#001015;
+    border-radius:8px;
+    font-weight:bold;
+    text-decoration:none;
+    margin-top:15px;
+    cursor:pointer;
+    border:none;
+}
+
+section{
+    padding:70px 7%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title h2{
+    font-size:34px;
+    color:#00eaff;
+}
+
+.title p{
+    color:#8899a5;
+    margin-top:10px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#0a1118;
+    border:1px solid #173447;
+    border-radius:15px;
+    padding:28px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:#00eaff;
+    box-shadow:0 0 20px rgba(0,234,255,.12);
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#8999a5;
+    line-height:1.6;
+}
+
+.tool{
+    max-width:700px;
+    margin:auto;
+    background:#0a1118;
+    border:1px solid #173447;
+    padding:30px;
+    border-radius:15px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #23475b;
+    background:#05080d;
+    color:white;
+    outline:none;
+}
+
+input:focus{
+    border-color:#00eaff;
+}
+
+.result{
+    margin-top:15px;
+    padding:15px;
+    border-radius:8px;
+    background:#05080d;
+    color:#aaa;
+    min-height:50px;
+}
+
+footer{
+    padding:30px;
+    text-align:center;
+    color:#667782;
+    border-top:1px solid #173447;
+}
+
+.status{
+    color:#00ff9d;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">⚡ CYBER SENTINEL</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#tools">Tools</a>
+        <a href="#learn">Learn</a>
+    </nav>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>CYBER SECURITY</h1>
+
+<p>
+Protect your digital world. Learn cybersecurity,
+check your security habits and explore useful
+defensive security tools.
+</p>
+
+<a href="#tools" class="btn">EXPLORE TOOLS</a>
+
+</div>
+
+</section>
+
+
+<!-- SECURITY STATUS -->
+
+<section>
+
+<div class="title">
+<h2>Security Status</h2>
+<p>Basic security awareness dashboard</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🛡️</div>
+<h3>Protection</h3>
+<p class="status">● Security Awareness Active</p>
+</div>
+
+<div class="card">
+<div class="icon">🔐</div>
+<h3>Password</h3>
+<p>Use unique and strong passwords for every important account.</p>
+</div>
+
+<div class="card">
+<div class="icon">🌐</div>
+<h3>Network</h3>
+<p>Avoid sensitive activities on unknown public Wi-Fi networks.</p>
+</div>
+
+<div class="card">
+<div class="icon">🚨</div>
+<h3>Threat Awareness</h3>
+<p>Never open suspicious links or unknown attachments.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TOOLS -->
+
+<section id="tools">
+
+<div class="title">
+<h2>Security Tools</h2>
+<p>Simple defensive security utilities</p>
+</div>
+
+
+<div class="grid">
+
+<div class="card">
+
+<div class="icon">🔑</div>
+
+<h3>Password Checker</h3>
+
+<p>
+Check the basic strength of a password locally in your browser.
+</p>
+
+<br>
+
+<input
+type="password"
+id="password"
+placeholder="Enter password"
+oninput="checkPassword()">
+
+<div class="result" id="passwordResult">
+Enter a password...
+</div>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🔗</div>
+
+<h3>URL Safety Check</h3>
+
+<p>
+Basic local checks for suspicious URL patterns.
+</p>
+
+<input
+type="text"
+id="url"
+placeholder="https://example.com">
+
+<button class="btn" onclick="checkURL()">
+CHECK URL
+</button>
+
+<div class="result" id="urlResult">
+Waiting for URL...
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LEARN -->
+
+<section id="learn">
+
+<div class="title">
+<h2>Learn Cyber Security</h2>
+<p>Start learning defensive cybersecurity</p>
+</div>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">🎣</div>
+<h3>Phishing</h3>
+<p>
+Learn how attackers use fake messages and websites
+to steal information and how to recognize them.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🦠</div>
+<h3>Malware</h3>
+<p>
+Understand malware types and learn safe practices
+for protecting your devices.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔒</div>
+<h3>Encryption</h3>
+<p>
+Learn the basics of encryption and why it is important
+for protecting sensitive information.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">👨‍💻</div>
+<h3>Ethical Security</h3>
+<p>
+Study cybersecurity legally and only test systems
+you own or have explicit permission to test.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 CYBER SENTINEL  
+<br><br>
+Defensive Cyber Security • Learn • Protect • Stay Safe
+
+</footer>
+
+
+<script>
+
+/* PASSWORD CHECKER */
+
+function checkPassword(){
+
+    let password =
+    document.getElementById("password").value;
+
+    let result =
+    document.getElementById("passwordResult");
+
+    if(password.length === 0){
+
+        result.innerHTML="Enter a password...";
+        return;
+
+    }
+
+    let score=0;
+
+    if(password.length >= 8)
+        score++;
+
+    if(/[A-Z]/.test(password))
+        score++;
+
+    if(/[a-z]/.test(password))
+        score++;
+
+    if(/[0-9]/.test(password))
+        score++;
+
+    if(/[^A-Za-z0-9]/.test(password))
+        score++;
+
+
+    if(score <= 2){
+
+        result.innerHTML =
+        "🔴 Weak password";
+
+    }else if(score <= 4){
+
+        result.innerHTML =
+        "🟡 Medium password";
+
+    }else{
+
+        result.innerHTML =
+        "🟢 Strong password";
+
+    }
+
+}
+
+
+/* URL CHECKER */
+
+function checkURL(){
+
+    let url =
+    document.getElementById("url").value.trim();
+
+    let result =
+    document.getElementById("urlResult");
+
+    if(url === ""){
+
+        result.innerHTML =
+        "⚠️ Please enter a URL.";
+
+        return;
+
+    }
+
+    let lower=url.toLowerCase();
+
+    let suspiciousWords=[
+        "login-verify",
+        "account-verify",
+        "free-money",
+        "password-reset",
+        "urgent-login"
+    ];
+
+    let suspicious=false;
+
+    suspiciousWords.forEach(function(word){
+
+        if(lower.includes(word)){
+            suspicious=true;
+        }
+
+    });
+
+
+    if(!/^https?:\/\//i.test(url)){
+
+        result.innerHTML =
+        "⚠️ URL should normally start with http:// or https://";
+
+        return;
+
+    }
+
+
+    if(suspicious){
+
+        result.innerHTML =
+        "🚨 Potentially suspicious pattern detected. Do not enter sensitive information.";
+
+    }else{
+
+        result.innerHTML =
+        "🟢 No basic suspicious pattern detected. This does NOT guarantee the website is safe.";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
